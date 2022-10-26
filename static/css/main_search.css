@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(820deg,#1980b9, #0e44ad);
+  height: 100vh;
+  overflow: hidden;
+}
+.access{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 85%;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 2px 5px 15px 5px rgba(0, 0, 0, 0.1);
+}
+.input-group mb-3{
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin: 20px ;
+  display: block;
+  width: 130%;
+}
+
+}
+.dropdown{
+    position: right;
+}
+.container{
+   position: absolute;
+   top: 55%;
+   left: 50%;
+   height: 85%;
+   width: 95%;
+   text-align: center;
+   white-spacing: nowrap;
+   background: white;
+   border-radius: 20px;
+   transform: translate(-50%, -50%);
+   box-shadow: 5px 10px 15px 10px rgba(0, 0, 0, 0.3);
+   padding: 30px 30px;
+}
+
+.btn_group{
+   positon: absolute;
+   top:
+}
+#collapse1{
+overflow-y:scroll;
+height:420px;
+
+.access h1{
+  text-align: left;
+  padding: 0px 0px;
+}
