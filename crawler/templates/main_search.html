@@ -45,99 +45,102 @@
                     <th scope="col">Link</th>
                 </tr>
                 </thead>
+                {% for k, v in data.items %}
                 <tbody>
                 <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>link</td>
+                    <th scope="row">{{ k }}</th>
+                    <td>{{ v.name }}</td>
+                    <td>{{ v.price }}</td>
+                    <td>{{ v.rating }}</td>
+                    <td>{{ v.link }}</td>
                 </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>link</td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>link</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>link</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>link</td>
-                </tr>
-                <tr>
-                    <th scope="row">4</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>link</td>
-                </tr>
-                <tr>
-                    <th scope="row">5</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>link</td>
-                </tr>
-                <tr>
-                    <th scope="row">6</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>link</td>
-                </tr>
-                <tr>
-                    <th scope="row">7</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>link</td>
-                </tr>
-                <tr>
-                    <th scope="row">8</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>link</td>
-                </tr>
-                <tr>
-                    <th scope="row">9</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>link</td>
-                </tr>
-                <tr>
-                    <th scope="row">10</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>link</td>
-                </tr>
-                <tr>
-                    <th scope="row">11</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>link</td>
-                </tr>
+
+<!--                <tr>-->
+<!--                    <th scope="row">1</th>-->
+<!--                    <td>Mark</td>-->
+<!--                    <td>Otto</td>-->
+<!--                    <td>@mdo</td>-->
+<!--                    <td>link</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <th scope="row">1</th>-->
+<!--                    <td>Mark</td>-->
+<!--                    <td>Otto</td>-->
+<!--                    <td>@mdo</td>-->
+<!--                    <td>link</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <th scope="row">2</th>-->
+<!--                    <td>Mark</td>-->
+<!--                    <td>Otto</td>-->
+<!--                    <td>@mdo</td>-->
+<!--                    <td>link</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <th scope="row">3</th>-->
+<!--                    <td>Mark</td>-->
+<!--                    <td>Otto</td>-->
+<!--                    <td>@mdo</td>-->
+<!--                    <td>link</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <th scope="row">4</th>-->
+<!--                    <td>Mark</td>-->
+<!--                    <td>Otto</td>-->
+<!--                    <td>@mdo</td>-->
+<!--                    <td>link</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <th scope="row">5</th>-->
+<!--                    <td>Mark</td>-->
+<!--                    <td>Otto</td>-->
+<!--                    <td>@mdo</td>-->
+<!--                    <td>link</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <th scope="row">6</th>-->
+<!--                    <td>Mark</td>-->
+<!--                    <td>Otto</td>-->
+<!--                    <td>@mdo</td>-->
+<!--                    <td>link</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <th scope="row">7</th>-->
+<!--                    <td>Mark</td>-->
+<!--                    <td>Otto</td>-->
+<!--                    <td>@mdo</td>-->
+<!--                    <td>link</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <th scope="row">8</th>-->
+<!--                    <td>Mark</td>-->
+<!--                    <td>Otto</td>-->
+<!--                    <td>@mdo</td>-->
+<!--                    <td>link</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <th scope="row">9</th>-->
+<!--                    <td>Mark</td>-->
+<!--                    <td>Otto</td>-->
+<!--                    <td>@mdo</td>-->
+<!--                    <td>link</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <th scope="row">10</th>-->
+<!--                    <td>Mark</td>-->
+<!--                    <td>Otto</td>-->
+<!--                    <td>@mdo</td>-->
+<!--                    <td>link</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <th scope="row">11</th>-->
+<!--                    <td>Mark</td>-->
+<!--                    <td>Otto</td>-->
+<!--                    <td>@mdo</td>-->
+<!--                    <td>link</td>-->
+<!--                </tr>-->
                 </tbody>
+                {% endfor %}
             </table>
         </div>
     </div>
