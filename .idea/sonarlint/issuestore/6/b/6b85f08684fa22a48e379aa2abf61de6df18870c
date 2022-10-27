@@ -1,3 +1,4 @@
 
-jpython:S1192"KDefine a constant instead of duplicating this literal 'Amazon.com' 6 times.(ØÄ8Âı¥¦Á0
-Gpython:S5780"(Change or remove duplicates of this key.(‘éÈ8ÂÒ¥¦Á0
+;python:S125"Remove this commented out code.(øåŒüÿÿÿÿ
+xpython:S1186"[Add a nested comment explaining why this function is empty, or complete the implementation.(Çšîÿÿÿÿÿ
+;python:S125"Remove this commented out code.(„ÄõŠûÿÿÿÿ
