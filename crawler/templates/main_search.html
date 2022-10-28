@@ -29,7 +29,7 @@
                 <thead>
                 <tr>
                     <th scope="col"><a href="#">No.</a></th>
-                    <th scope="col">Name</th>
+                    <th scope="col"><a href="#">Name</a></th>
                     <th scope="col"><a href="?sort=price&searchItem={{ searchItem }}">Price</a></th>
                     <th scope="col" data-field="rating"><a href="?sort=rating&searchItem={{ searchItem }}">Rating</a></th>
                 </tr>
@@ -40,7 +40,7 @@
                 <tr>
                     <th scope="row">{{ k }}</th>
                     <td><a href="https://{{ v.link }}" target="_blank" rel="noopener noreferrer">{{ v.name }}</a></td>
-                    <td>{{ v.price }}</td>
+                    <td>₹{{ v.price }}</td>
                     <td>{{ v.rating }}</td>
                 </tr>
                 </tbody>

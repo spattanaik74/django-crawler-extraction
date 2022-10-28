@@ -16,7 +16,7 @@ def main_page(request):
         print(_search_item)
         print(_sort_by)
         dict_data = scaper_python.extract_all_data(_search_item)
-        dict_data = OrderedDict(sorted(dict_data.items(), key=lambda x: getitem(x[1], _sort_by)))
+        dict_data = OrderedDict(sorted(dict_data.items(), key=lambda x: float(getitem(x[1], _sort_by)), reverse=True))
         dict_data = {k: v for k, v in dict_data.items()}
     if request.method == 'POST':
         search_item = request.POST['search-input']

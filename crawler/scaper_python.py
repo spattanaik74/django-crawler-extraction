@@ -26,8 +26,8 @@ def extract_model_flipkart(item):
     for data in soup.findAll('div', class_='_2kHMtA'):
         dict_data[count] = {
             'name': data.find('div', attrs={'class': '_4rR01T'}).text,
-            'price': data.find('div', attrs={'class': '_30jeq3 _1_WHN1'}).text,
-            'rating': ["None" if not data.find('div', attrs={'class': '_3LWZlK'})
+            'price': data.find('div', attrs={'class': '_30jeq3 _1_WHN1'}).text.replace('₹', '').replace(',', ''),
+            'rating': ["0" if not data.find('div', attrs={'class': '_3LWZlK'})
                        else data.find('div', attrs={'class': '_3LWZlK'}).text][0],
             'link': 'flipkart.com' + data.find('a', attrs={'class': '_1fQZEK'})['href']}
 
@@ -38,7 +38,8 @@ def extract_model_flipkart(item):
 
 def extract_model_amazon(item):
     HEADERS = ({'User-Agent':
-                    'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36',
+                    'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 '
+                    'Safari/537.36',
                 'Accept-Language': 'en-US'})
     dict_data = {}
     page = requests.get(amazon_get_url(item), headers=HEADERS)
@@ -47,9 +48,9 @@ def extract_model_amazon(item):
     for data in soup.findAll('div', class_='sg-col sg-col-4-of-12 sg-col-8-of-16 sg-col-12-of-20 s-list-col-right'):
         dict_data[count] = {
             'name': data.find('span', attrs={'class': 'a-size-medium a-color-base a-text-normal'}).text,
-            'price': '₹' + ["None" if not data.find('span', attrs={'class': 'a-price-whole'})
-                            else data.find('span', attrs={'class': 'a-price-whole'}).text][0],
-            'rating': ["None" if not data.find('span', attrs={'class': 'a-icon-alt'})
+            'price': ["0" if not data.find('span', attrs={'class': 'a-price-whole'})
+                            else data.find('span', attrs={'class': 'a-price-whole'}).text][0].replace(',', ''),
+            'rating': ["0" if not data.find('span', attrs={'class': 'a-icon-alt'})
                        else data.find('span', attrs={'class': 'a-icon-alt'}).text][0][:3],
             'link': 'amazon.in' + data.find('a', attrs={
                 'class': 'a-link-normal s-underline-text s-underline-link-text s-link-style a-text-normal'})['href']}
@@ -78,9 +79,3 @@ def extract_all_data(item):
         count += 1
 
     return dict_all_data
-
-
-# model = extract_model_flipkart('iphone')
-# var = OrderedDict(sorted(model.items(), key=lambda x: getitem(x[1], 'rating')))
-# dict_1 = {k: v for k, v in var.items()}
-# print(dict_1)
